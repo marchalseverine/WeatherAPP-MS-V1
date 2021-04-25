@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="dashboard">
+        <div class="container">
+          <div class="date">
+            <h4 id="current-date">Today, 21:33</h4>
+          </div>
+          <br />
+          <div id="city-now">
+            <h1 id="current-city"><strong>Valencia</strong></h1>
+          </div>
+          <div class="description-weather">
+            <h2 id="weather-description">-</h2>
+          </div>
+          <br />
+          <div id="weather-icon">
+            <img src="images/cloud.png" alt="cloud" width="70px" />
+          </div>
+          <br />
+
+          <br />
+          <div class="row row-col-3">
+            <div class="col border-right">
+              <span class="wind">
+                <p>Wind</p>
+              </span>
+              <span>
+                <h3 id="wind-speed">-</h3>
+              </span>
+            </div>
+            <div class="col border-right">
+              <span id="temp">
+                <p>Temperature</p>
+                <h3>
+                  <span class = "tempC TempF" id="temperature">-</span>
+                  <a href="#" id="celcius">ºC</a> |
+                  <a href="##" id="fahrenheit"> ºF</a>
+                </h3>
+              </span>
+            </div>
+            <div class="col">
+              <spanid="humidity">
+                <p>Humidity</p>
+                <span >
+                  <h3 id="humidity-percent">25%</h3>
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="forecast">
+            <br />
+            <hr />
+
+            <div class="row row-col-5">
+              <div class="col border-right">
+                <div class="day1" id="weather-forecast-day">
+                  <p>Tues</p>
+                  <div class="icons">☀️</div>
+                  <br />
+                  <div class="forecast-temperature">23ºC</div>
+                </div>
+              </div>
+              <div class="col border-right">
+                <div class="day2" id="weather-forecast-day">
+                  <p>Wed</p>
+                  <div class="icons">☀️</div>
+                  <br />
+                  <div class="forecast-temperature">23ºC</div>
+                </div>
+              </div>
+              <div class="col border-right">
+                <div class="day3" id="weather-forecast-day">
+                  <p>Thu</p>
+                  <div class="icons">☀️</div>
+                  <br />
+                  <div class="forecast-temperature">23ºC</div>
+                </div>
+              </div>
+
+              <div class="col border-right">
+                <div class="day4" id="weather-forecast-day">
+                  <p>Fri</p>
+                  <div class="icons">☀️</div>
+                  <br />
+                  <div class="forecast-temperature">23ºC</div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="day5" id="weather-forecast-day">
+                  <p>Sat</p>
+                  <div class="icons">☀️</div>
+                  <br />
+                  <div class="forecast-temperature">23ºC</div>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+            <div class="menu">
+              <form id="city-input">
+                <input
+                  autocomplete="off"
+                  autofocus="on"
+                  class="city"
+                  id="search-a-city"
+                  placeholder="Search for a city..."
+                  type="text"
+                />
+                <input id="search-button" type="submit" value="🔎" />
+              </form>
+            <button class ="button" type="button" id="location-button">
+              📍
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p class="coder">Coded by Séverine Marchal</p>
+      </footer>
+    </div>
+  </body>
+  <script src="src/index.js"></script>
+</html>
