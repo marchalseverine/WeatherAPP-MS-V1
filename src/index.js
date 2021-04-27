@@ -1,5 +1,3 @@
-
-
 function formatDate (timestamp){
 let date = new Date (timestamp);
 let days = [
@@ -40,6 +38,8 @@ function displayWeather(response) {
   let cityName = document.querySelector("#current-city");
   let iconWeather = document.querySelector ("#weather-icon");
   let dateElement = document.querySelector ("#current-date");
+
+  celsiusTemperature = Math.round(response.data.main.temp);
   cityName.innerHTML = `${response.data.name}`;
   tempNow.innerHTML = `${temp}`;
   description.innerHTML = `${descriptionNow}`;
@@ -89,3 +89,27 @@ function showPosition(event) {
 
 let positionBtn = document.querySelector("#location-button");
 positionBtn.addEventListener("click", showPosition);
+
+//
+
+function showFahrenheit (event){
+    event.preventDefault();
+    let tempElement = document.querySelector ("#temperature");
+    let fahrenheitTemperature = (celsiusTemperature * 9)/5 + 32;
+    tempElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function ShowCelsius(event){
+    event.preventDefault();
+    let tempElement = document.querySelector("#temperature");
+    tempElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector ("#fahrenheit-link");
+fahrenheitLink.addEventListener ("click", showFahrenheit);
+
+let celsiusLink = document.querySelector ("#celsius-link");
+celsiusLink.addEventListener ("click", ShowCelsius);
