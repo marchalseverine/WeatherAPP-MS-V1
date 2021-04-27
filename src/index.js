@@ -29,11 +29,14 @@ function displayWeather(response) {
   let humidityNow = Math.round(response.data.main.humidity);
   let windNow = Math.round(response.data.wind.speed);
   let cityName = document.querySelector("#current-city");
+  let iconWeather = document.querySelector ("#weather-icon");
   cityName.innerHTML = `${response.data.name}`;
   tempNow.innerHTML = `${temp}`;
   description.innerHTML = `${descriptionNow}`;
   humidity.innerHTML = `${humidityNow}%`;
   wind.innerHTML = `${windNow}km/h`;
+  iconWeather.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconWeather.setAttribute ("alt", response.data.weather[0].description);
 }
 
 ///////////////////////////

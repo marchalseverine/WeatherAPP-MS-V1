@@ -7,7 +7,7 @@ body {
 
 .dashboard {
   width: 500px;
-  height: 600px;
+  height: 630px;
   background-color: transparent;
   background: linear-gradient(
     to left bottom,
@@ -24,6 +24,7 @@ body {
 img {
   display: block;
   margin: 0 auto;
+
 }
 
 h1,
@@ -47,7 +48,7 @@ h3 {
 }
 
 img {
-  max-width: 250px;
+  max-width: 300px;
 }
 
 .description-weather {
